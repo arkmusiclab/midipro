@@ -72,17 +72,20 @@ section {
 }
 
 .gallery-wrapper {
-    width: 320px; /* 중앙에 보여줄 이미지 크기 */
-    overflow: hidden;
+    width: 100%; /* 🔥 변경: 가로 전체 너비 사용 */
+    overflow: hidden; 
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .gallery {
     display: flex;
     gap: 10px;
-    width: max-content; /* 전체 이미지가 가려지지 않게 자동으로 넓이 조정 */
+    min-width: 100%; /* 🔥 변경: 최소 너비 설정 */
     transition: transform 0.5s ease-in-out;
+    overflow-x: auto; /* 🔥 변경: 스크롤 가능하게 */
+    scroll-behavior: smooth;
 }
 
 .gallery img {
@@ -114,11 +117,11 @@ button {
 }
 
 .prev {
-    left: 10px;
+    left: -40px; /* 🔥 변경: 화살표 버튼이 이미지와 겹치지 않도록 조정 */
 }
 
 .next {
-    right: 10px;
+    right: -40px; /* 🔥 변경: 화살표 버튼 위치 조정 */
 }
 
 button:hover {
