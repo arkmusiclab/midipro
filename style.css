@@ -13,11 +13,13 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 header {
-    background: url('https://github.com/arkmusiclab/midipro/blob/main/%EB%AF%B8%EB%94%94%ED%94%84%EB%A1%9C%20%ED%97%A4%EB%8D%94.jpg?raw=true') center/cover no-repeat;
-    color: white;
+    background: url('https://images.unsplash.com/photo-1529362487499-b149087a4f62?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    width: 100vw;
+    height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
