@@ -58,4 +58,62 @@ section {
     background: white;
     padding: 30px;
     border-radius: 10px;
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* 원하는 최대 너비 */
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* 스크롤바 숨기기 (Firefox) */
+}
+
+.gallery::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨기기 (Chrome, Safari) */
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* 마우스 오버 시 확대 */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
 }
